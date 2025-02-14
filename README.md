@@ -17,7 +17,3 @@ https://github.com/hyukjin87/Unity/tree/main/mySolitaire
 
 #HTML Template
 The HTML template used for this README is a free template obtained from (https://www.free-css.com/free-css-templates/page287/steller).
-
-
-#PDF js
-https://mozilla.github.io/pdf.js/
