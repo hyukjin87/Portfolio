@@ -26,22 +26,38 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" data-lang="page_nav_home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" data-lang="page_nav_about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Service</a>
+                        <a class="nav-link" href="#service" data-lang="page_nav_service">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" data-lang="page_nav_skills">Skills</a>
                     </li>                   
                     <li class="nav-item">
-                        <a class="nav-link" href="#Career">Career</a>
+                        <a class="nav-link" href="#Career" data-lang="page_nav_career">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio" data-lang="page_nav_portfolio">Portfolio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" 
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="selected-flag" src="assets/imgs/flags/us.png" alt="US Flag" style="width: 20px; height: 14px;">
+                            <span id="selected-language">English</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('us', 'English')">
+                                <img src="assets/imgs/flags/us.png" alt="US Flag" style="width: 20px; height: 14px;"> English
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('kr', '한국어')">
+                                <img src="assets/imgs/flags/kr.png" alt="Korean Flag" style="width: 20px; height: 14px;"> 한국어
+                            </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -53,13 +69,13 @@
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">hello,I'm</h6>
-                <h6 class="title">Hyuk Jin Kwon</h6>
-                <p>Software Developer / Game Developer</p>
+                <h6 class="subtitle" data-lang="header_greeting">hello,I'm</h6>
+                <h6 class="title" data-lang="header_name">Hyuk Jin Kwon</h6>
+                <p data-lang="header_role">Software Developer / Game Developer</p>
 
                 <div class="buttons pt-3">
-                    <button class="btn btn-primary rounded" onclick="location.href='mailto:wkwkdaus79@gmail.com';">HIRE ME</button>
-                    <button class="btn btn-dark rounded" onclick="downloadResume()">DOWNLOAD CV</button>
+                    <button class="btn btn-primary rounded" data-lang="header_hire_me" onclick="location.href='mailto:wkwkdaus79@gmail.com';">HIRE ME</button>
+                    <button class="btn btn-dark rounded" data-lang="header_download_cv" onclick="downloadResume()">DOWNLOAD CV</button>
                 </div>      
                 <div class="socials mt-4">
                     <a class="social-item" href="https://www.linkedin.com/in/hyuk-jin-kwon-82a040231/" target="_blank"><i class="ti-linkedin"></i></a>
@@ -82,12 +98,12 @@
                     <img src="assets/imgs/avatar.jpg" alt="" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
-                    <h6 class="title">Hyuk Jin Kwon</h6>
-                    <p class="subtitle">Software Developer / Game Developer</p>
-                    <p>Hello, I am a seasoned game system and balance designer with seven years of experience in the Korean mobile game industry. Throughout my career, I have worked with prestigious companies like Netmarble N2 and Entwell and have acquired a wealth of knowledge in developing and releasing mobile games, as well as a strong understanding of data management.</p>
-                    <p>In addition to my technical expertise, I possess excellent MS Office skills in Word, Excel, and PowerPoint, along with outstanding communication abilities and a talent for responding effectively to various issues. Furthermore, my adaptability to new computer languages and tools is highly commendable, enabling me to stay on top of industry trends and deliver quality results.</p>
-                    <p>With my experience, skills, and knowledge, I am confident in my ability to make valuable contributions to any team in the game development industry.</p>
-                    <button class="btn btn-primary rounded mt-3" onclick="downloadResume()">DOWNLOAD CV</button>                   
+                    <h6 class="title" data-lang="about_title">Hyuk Jin Kwon</h6>
+                    <p class="subtitle" data-lang="about_subtitle">Software Developer / Game Developer</p>
+                    <p data-lang="about_des_1">Hello, I am a seasoned game system and balance designer with seven years of experience in the Korean mobile game industry. Throughout my career, I have worked with prestigious companies like Netmarble N2 and Entwell and have acquired a wealth of knowledge in developing and releasing mobile games, as well as a strong understanding of data management.</p>
+                    <p data-lang="about_des_2">In addition to my technical expertise, I possess excellent MS Office skills in Word, Excel, and PowerPoint, along with outstanding communication abilities and a talent for responding effectively to various issues. Furthermore, my adaptability to new computer languages and tools is highly commendable, enabling me to stay on top of industry trends and deliver quality results.</p>
+                    <p data-lang="about_des_3">With my experience, skills, and knowledge, I am confident in my ability to make valuable contributions to any team in the game development industry.</p>
+                    <button class="btn btn-primary rounded mt-3" data-lang="about_download_cv" onclick="downloadResume()">DOWNLOAD CV</button>                   
                 </div>
             </div>
         </div>
@@ -96,16 +112,16 @@
     <!-- Service section -->
     <section id="service" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Service</h6>
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">I specialize in developing and servicing mobile games, as well as managing project management and game data.</br> In order to expand my field into software development, I obtained a Software Engineering Technician diploma.</p>
+            <h6 class="subtitle" data-lang="service_title">Service</h6>
+            <h6 class="section-title mb-4" data-lang="service_subtitle">What I Do</h6>
+            <p class="mb-5 pb-4" data-lang="service_des">I specialize in developing and servicing mobile games, as well as managing project management and game data.</br> In order to expand my field into software development, I obtained a Software Engineering Technician diploma.</p>
 
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-mobile"></i>
-                            <h5>Mobile Game Developer</h5>
+                            <h5 data-lang="service_item_1">Mobile Game Developer</h5>
                         </div>
                     </div>
                 </div>                
@@ -113,7 +129,7 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-notepad"></i>
-                            <h5>Project Management</h5>
+                            <h5 data-lang="service_item_2">Project Management</h5>
                         </div>
                     </div>
                 </div>
@@ -121,7 +137,7 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-server"></i>
-                            <h5>Data Administrator</h5>
+                            <h5 data-lang="service_item_3">Data Administrator</h5>
                         </div>
                     </div>
                 </div>
@@ -129,7 +145,7 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-desktop"></i>
-                            <h5>Software Developer</h5>
+                            <h5 data-lang="service_item_4">Software Developer</h5>
                         </div>
                     </div>
                 </div>
@@ -141,31 +157,31 @@
     <!-- Skills section -->
     <section id="skills" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Why Choose me</h6>
-            <p class="mb-5 pb-4">I possess proficiency in using MS Office tools such as Word, Excel, and PowerPoint, </br> as well as knowledge of various programming languages. </br>Additionally, I have extensive experience in issues solving and data management.</p>
+            <h6 class="subtitle" data-lang="skills_title">Skills</h6>
+            <h6 class="section-title mb-4" data-lang="skills_subtitle">Why Choose me</h6>
+            <p class="mb-5 pb-4" data-lang="skills_des">I possess proficiency in using MS Office tools such as Word, Excel, and PowerPoint, </br> as well as knowledge of various programming languages. </br>Additionally, I have extensive experience in issues solving and data management.</p>
 
             <div class="row text-left">
                 <div class="col-sm-6">
-                    <h6 class="mb-3">MS Office</h6>
+                    <h6 class="mb-3" data-lang="skills_name_1">MS Office</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Programming Language</h6>
+                    <h6 class="mb-3" data-lang="skills_name_2">Programming Language</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Issue Management</h6>
+                    <h6 class="mb-3" data-lang="skills_name_3">Issue Management</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Data Analysis</h6>
+                    <h6 class="mb-3" data-lang="skills_name_4">Data Analysis</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
@@ -178,9 +194,9 @@
     <!-- Career section -->
     <section id="Career" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Career</h6>
-            <h6 class="section-title mb-4">Check My Wonderful Work Experience</h6>
-            <p class="mb-5 pb-4">Summary of Projects and Experiences Conducted by Korean Game Companies in the Past Year. <a href="./process.html" target="_blank">More Info...</a></p>
+            <h6 class="subtitle" data-lang="career_title">Career</h6>
+            <h6 class="section-title mb-4" data-lang="career_subtitle">Check My Wonderful Work Experience</h6>
+            <p class="mb-5 pb-4" data-lang="career_des">Summary of Projects and Experiences Conducted by Korean Game Companies in the Past Year. <a href="./process.html" target="_blank" data-lang="career_more_info">More Info...</a></p>
             
             <div class="col-12">
                 <table>
@@ -189,39 +205,39 @@
                             <th scope="col" colspan="7">Major History</th>
                         </tr>
                         <tr>
-                            <th scope="col">Title</th>
-                            <th scope="col">Img</th>
-                            <th scope="col">Genre</th>
-                            <th scope="col">Task</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Company</th>
-                            <th scope="col">Period</th>
+                            <th scope="col" data-lang="career_header_1">Title</th>
+                            <th scope="col" data-lang="career_header_2">Img</th>
+                            <th scope="col" data-lang="career_header_3">Genre</th>
+                            <th scope="col" data-lang="career_header_4">Task</th>
+                            <th scope="col" data-lang="career_header_5">Position</th>
+                            <th scope="col" data-lang="career_header_6">Company</th>
+                            <th scope="col" data-lang="career_header_7">Period</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Fate/Grand Order</td>
+                            <td data-lang="career_project_title_1">Fate/Grand Order</td>
                             <td><img src="assets/imgs/project1.png" alt="" width="100" height="100"></td>
                             <td>RPG</td>
-                            <td align="left">Generated and monitored event data every 3 weeks, <br>including bug fixing and adjustments.</td>
+                            <td data-lang="career_project_task_1">Generated and monitored event data every 3 weeks, <br>including bug fixing and adjustments.</td>
                             <td>System</td>
                             <td>NetmarbleN2</td>
                             <td>2020.10 ~ 2021.12</td>
                         </tr>
                         <tr>
-                            <td>Project M</td>
+                            <td data-lang="career_project_title_2">Project M</td>
                             <td><img src="assets/imgs/project2.png" alt="" width="100" height="100"></td>
                             <td>AOS</td>
-                            <td align="left">Planned game concepts and designed systems, <br>incorporating analysis and ideas for using Disney IPs.</td>
+                            <td data-lang="career_project_task_2">Planned game concepts and designed systems, <br>incorporating analysis and ideas for using Disney IPs.</td>
                             <td>Concept & System</td>
                             <td>NetmarbleN2</td>
                             <td>2019.10 ~ 2020.10</td>
                         </tr>
                         <tr>
-                            <td>Catch Mind</td>
+                            <td data-lang="career_project_title_3">Catch Mind</td>
                             <td><img src="assets/imgs/project3.png" alt="" width="100" height="100"></td>
                             <td>Casual</td>
-                            <td align="left">Developed and released a game, analyzing and applying keywords for game content.
+                            <td data-lang="career_project_task_3">Developed and released a game, analyzing and applying keywords for game content.
                                 Designed account integration for different platforms and planned a web-drawing tool for user acquisition.
                                 Collaborated with the marketing department on promotional material production.
                                 Prepared localization for the North American market.</td>
@@ -230,10 +246,10 @@
                             <td>2019.04 ~ 2019.10</td>
                         </tr>
                         <tr>
-                            <td>Travelling Millionaire</td>
+                            <td data-lang="career_project_title_4">Travelling Millionaire</td>
                             <td><img src="assets/imgs/project4.png" alt="" width="100" height="100"></td>
                             <td>Board</td>
-                            <td align="left">Managed game build updates in Turkey and MENA regions. <br>
+                            <td data-lang="career_project_task_4">Managed game build updates in Turkey and MENA regions. <br>
                                 Determined schedules and specifications for updates every 3 months. <br>
                                 Participated in development and oversaw the update process. <br>
                                 Created and managed event data applied twice a week. <br>
@@ -243,10 +259,10 @@
                             <td>2017.03 ~ 2019.04</td>
                         </tr>
                         <tr>
-                            <td>We are the Heroes</td>
+                            <td data-lang="career_project_title_5">We are the Heroes</td>
                             <td><img src="assets/imgs/project5.png" alt="" width="100" height="100"></td>
                             <td>RPG</td>
-                            <td align="left">Involved in the initial development process, launch, and service of the game.
+                            <td data-lang="career_project_task_5">Involved in the initial development process, launch, and service of the game.
                                 Contributed to game planning, managed character growth and numerical values.
                                 Designed and developed over 300 skills for 50+ characters and balanced game mechanics.
                                 Created an engaging endless dungeon feature.
@@ -263,9 +279,9 @@
     <!-- Portfolio section -->
     <section id="portfolio" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Building Experiences:<br>My journey in Development</h6>
-            <p class="mb-5 pb-4">Exploring diverse technologies from web development to game and software engineering.</p>
+            <h6 class="subtitle" data-lang="portfolio_title">Portfolio</h6>
+            <h6 class="section-title mb-4" data-lang="portfolio_subtitle">Building Experiences:<br>My journey in Development</h6>
+            <p class="mb-5 pb-4" data-lang="portfolio_des">Exploring diverse technologies from web development to game and software engineering.</p>
 
             <div class="row">
 
@@ -274,10 +290,10 @@
                         <img src="assets/imgs/ss_portfolio_main.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Game Designer Portfolio Website</h5>
+                                <h5 data-lang="portfolio_project_name_1">Portfolio Website</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/hyukjin87/Portfolio" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> HTML, JavaScript, CSS<br><b>Des:</b> Creating a homepage</div>
+                                <div class="bubble" data-lang="portfolio_project_des_1"><b>Skills:</b> HTML, JavaScript, CSS<br><b>Des:</b> Creating a homepage</div>
                             </div>  
                         </div>
                     </div>
@@ -285,10 +301,10 @@
                         <img src="assets/imgs/ss_notepad.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Notepad Program<br>Save and Open text file using file input/output</h5>
+                                <h5 data-lang="portfolio_project_name_2">Notepad Program<br>Save and Open text file using file input/output</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/hyukjin87/Notepad" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> WPF(xaml, c#), PHP(other version)<br><b>Des:</b> Create Notepad Program <br>and Notepad Homepage</div>
+                                <div class="bubble" data-lang="portfolio_project_des_2"><b>Skills:</b> WPF(xaml, c#), PHP(other version)<br><b>Des:</b> Create Notepad Program <br>and Notepad Homepage</div>
                             </div>                              
                         </div>
                     </div>                  
@@ -298,11 +314,11 @@
                         <img src="assets/imgs/ss_dodge.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Dodge game built in HTML<br>Press the Play button to play now</h5>
+                                <h5 data-lang="portfolio_project_name_3">Dodge game built in HTML<br>Press the Play button to play now</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="./webGame/Dodge/index.html" target="_blank"><i class="ti-control-play"></i></a>
                                 <a href="https://github.com/hyukjin87/Unity/tree/main/Dodge" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> C#, Unity<br><b>Des:</b> Avoid bullets with arrow keys<br>Eat items and increase the level of difficulty</div>
+                                <div class="bubble" data-lang="portfolio_project_des_3"><b>Skills:</b> C#, Unity<br><b>Des:</b> Avoid bullets with arrow keys<br>Eat items and increase the level of difficulty</div>
                             </div>  
                         </div>
                     </div>
@@ -310,11 +326,11 @@
                         <img src="assets/imgs/ss_solitaire.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Solitaire built in HTML<br>Press the Play button to play now</h5>
+                                <h5 data-lang="portfolio_project_name_4">Solitaire built in HTML<br>Press the Play button to play now</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="./webGame/Solitaire/index.html" target="_blank"><i class="ti-control-play"></i></a>
                                 <a href="https://github.com/hyukjin87/Unity/tree/main/mySolitaire" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> C#, Unity<br><b>Des:</b> Fitted to mobile layout<br>Added auto-select function</div>
+                                <div class="bubble" data-lang="portfolio_project_des_4"><b>Skills:</b> C#, Unity<br><b>Des:</b> Fitted to mobile layout<br>Added auto-select function</div>
                             </div>                              
                         </div>
                     </div>                  
@@ -324,10 +340,10 @@
                         <img id="radioImage" src="assets/imgs/ss_radio_1.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Car Radio Software<br>Study OOP Inheritance</h5>
+                                <h5 data-lang="portfolio_project_name_5">Car Radio Software<br>Study OOP Inheritance</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/hyukjin87/study/tree/main/class%20inheritance" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> C++<br><b>Des:</b> Execute programs through key buttons<br>change and save frequencies, and volume</div>
+                                <div class="bubble" data-lang="portfolio_project_des_5"><b>Skills:</b> C++<br><b>Des:</b> Execute programs through key buttons<br>change and save frequencies, and volume</div>
                             </div>  
                         </div>
                     </div>
@@ -335,38 +351,14 @@
                         <img id="serverImage" src="assets/imgs/ss_hilow_1.PNG" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Hi Low Game<br>Create a separate client and server programs</h5>
+                                <h5 data-lang="portfolio_project_name_6">Hi Low Game<br>Create a separate client and server programs</h5>
                                 <a onclick="toggleBubble(this)"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/hyukjin87/HiLowGame" target="_blank"><i class="ti-github"></i></a>
-                                <div class="bubble"><b>Skills:</b> C# (TCP/IP)<br><b>Des:</b> Enter a connection Server<br>Match the random number provided by server</div>
+                                <div class="bubble" data-lang="portfolio_project_des_6"><b>Skills:</b> C# (TCP/IP)<br><b>Des:</b> Enter a connection Server<br>Match the random number provided by server</div>
                             </div>                              
                         </div>
                     </div>                  
-                </div>
-                <!--
-                <div class="col-sm-6">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/ss_dodge.PNG" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Play Dodge</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="./webGame/Dodge/index.html" target="_blank"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                                
-                <div class="col-sm-6">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/ss_solitaire.PNG" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Play Solitaire</h5>
-                                <a href="./webGame/Solitaire/index.html" target="_blank"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div> -->                    
+                </div>         
             </div>
 
         </div>
@@ -379,11 +371,11 @@
                 <div class="card-body text-light">
                     <div class="row align-items-center">
                         <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">I am fully prepared and eager to undertake a diverse range of challenging development projects with utmost dedication and unwavering commitment to achieve exceptional results.</p>
+                            <h5 class="mt-3" data-lang="hire_title">Hire Me For Your Project</h5>
+                            <p class="mb-3" data-lang="hire_des">I am fully prepared and eager to undertake a diverse range of challenging development projects with utmost dedication and unwavering commitment to achieve exceptional results.</p>
                         </div>
                         <div class="col-sm-3 text-center text-sm-right">
-                            <button class="btn btn-light rounded"  onclick="location.href='mailto:wkwkdaus79@gmail.com';">Hire Me!</button>
+                            <button class="btn btn-light rounded" data-lang="hire_text" onclick="location.href='mailto:wkwkdaus79@gmail.com';">Hire Me!</button>
                         </div>
                     </div>
                 </div> 

@@ -1,11 +1,17 @@
+let currentLanguage = "en";
+
+
+
 function downloadResume() {
-    var link = document.createElement("a");
-    link.href = "./assets/Resume_Jin.pdf";
-    link.download = "Resume_Jin.pdf";
-    link.target = "_blank";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  var link = document.createElement("a");
+  let fileName = currentLanguage === "kr" ? "Resume_Jin_kr.pdf" : "Resume_Jin.pdf"; // Korean version using kr
+
+  link.href = `./assets/${fileName}`;
+  link.download = fileName;
+  link.target = "_blank";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
   }
 
 
@@ -44,3 +50,32 @@ const radioImages = [
 // call the common function
 startImageRotation("serverImage", serverImages, 1000);
 startImageRotation("radioImage", radioImages, 1000);
+
+
+
+function changeLanguage(lang, text) {
+  if (lang === currentLanguage) return;  // if same language no excute
+
+  document.getElementById("selected-flag").src = `assets/imgs/flags/${lang}.png`;
+  document.getElementById("selected-language").innerHTML = text;
+
+
+  // load json
+  fetch("assets/js/languages.json")
+  .then(response => response.json())
+  .then(data => {
+      if (data[lang]) {
+          document.querySelectorAll("[data-lang]").forEach(element => {
+              let key = element.getAttribute("data-lang");
+              if (data[lang][key]) {
+                  element.innerHTML = data[lang][key];
+              }
+          });
+      }
+
+      // save current language
+      currentLanguage = lang;
+
+  })
+  .catch(error => console.error("Error loading language file:", error));
+}
